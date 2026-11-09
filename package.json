@@ -1,0 +1,23 @@
+{
+  "name": "field-service-staged-cutover",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/dispatch_service.ts",
+    "rollout": "tsx src/schedule_rollout.ts",
+    "test": "node --import tsx --test test/work_order_decision.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

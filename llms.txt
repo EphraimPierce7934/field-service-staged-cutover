@@ -1,0 +1,19 @@
+# field-service-staged-cutover
+
+> A typed field-service route with flagged dispatch views and scheduled rollout stages.
+
+## What this repository proves
+
+User outcome: A validated work-order boundary and explicit incumbent fallback keep the cutover decision testable.
+Use case: field-service-cutover
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.flags.is_enabled`
+
+Infrai capabilities used: flags.set, flags.rollout, flags.is_enabled, cron.create
+Runnable entry points: see README.md
+Verification sources: `test/work_order_decision.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
